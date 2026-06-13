@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="./tokens.css">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--gla-cream-50); }
+  .mhs-masonry { column-count: 4; column-gap: 16px; }
+  .mhs-masonry > * { break-inside: avoid; margin-bottom: 16px; }
+  @media (max-width: 1100px) { .mhs-masonry { column-count: 3; } }
+  @media (max-width: 760px) { .mhs-masonry { column-count: 2; } }
+</style>
+</helmet>
+
+<div data-screen-label="Gallery" style="font-family: var(--font-sans); color: var(--gla-ink-900); background: var(--gla-cream-50); overflow-x: clip;">
+
+  <!-- Header -->
+  <header id="mhs-header" style="position: sticky; top: 0; z-index: 50; background: rgba(251,250,246,0.86); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--gla-cream-300); transition: box-shadow var(--duration) var(--easing-soft);">
+    <div style="max-width: 1280px; margin: 0 auto; padding: 0 56px; height: 78px; display: flex; align-items: center; justify-content: space-between; gap: 32px;">
+      <a href="Home.dc.html" style="display: flex; align-items: center; gap: 13px; text-decoration: none;">
+        <span style="width: 42px; height: 42px; border-radius: 50%; background: var(--gla-green-800); border: 1.5px solid var(--gla-gold-500); display: flex; align-items: center; justify-content: center; color: var(--gla-cream-50); font-family: var(--font-serif); font-style: italic; font-weight: 700; font-size: 22px; box-shadow: var(--elev-1);">M</span>
+        <span style="display: flex; flex-direction: column; line-height: 1;">
+          <span style="font-family: var(--font-serif); font-style: italic; font-weight: 600; font-size: 22px; color: var(--gla-green-800); letter-spacing: 0.01em;">Maheshwaram</span>
+          <span style="font-size: 9.5px; font-weight: 600; letter-spacing: 0.32em; text-transform: uppercase; color: var(--gla-ink-400); margin-top: 3px;">Fine Stationery</span>
+        </span>
+      </a>
+      <nav style="display: flex; align-items: center; gap: 30px;">
+        <a href="Home.dc.html" style="font-size: 14.5px; font-weight: 500; color: var(--gla-ink-700); text-decoration: none;" style-hover="color: var(--gla-green-700);">Home</a>
+        <a href="Home.dc.html#categories" style="font-size: 14.5px; font-weight: 500; color: var(--gla-ink-700); text-decoration: none;" style-hover="color: var(--gla-green-700);">Shop</a>
+        <a href="Gallery.dc.html" style="font-size: 14.5px; font-weight: 600; color: var(--gla-green-800); text-decoration: none;">Gallery</a>
+        <a href="About.dc.html" style="font-size: 14.5px; font-weight: 500; color: var(--gla-ink-700); text-decoration: none;" style-hover="color: var(--gla-green-700);">About</a>
+        <a href="Contact.dc.html" style="font-size: 14.5px; font-weight: 500; color: var(--gla-ink-700); text-decoration: none;" style-hover="color: var(--gla-green-700);">Contact</a>
+      </nav>
+      <a href="Contact.dc.html" style="display: inline-flex; align-items: center; gap: 8px; background: var(--gla-green-800); color: var(--gla-cream-50); padding: 12px 22px; border-radius: 999px; font-size: 13.5px; font-weight: 600; text-decoration: none; box-shadow: var(--elev-1); transition: background var(--duration) var(--easing-soft);" style-hover="background: #083428;">Visit the Store</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section style="background: var(--gla-cream-100); padding: 72px 0 60px; text-align: center;">
+    <div style="max-width: 720px; margin: 0 auto; padding: 0 56px;">
+      <span style="display: inline-flex; align-items: center; gap: 8px; font-size: 12.5px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gla-green-600); margin-bottom: 18px;"><span style="width: 26px; height: 1.5px; background: var(--gla-gold-500); display: inline-block;"></span>The Gallery</span>
+      <h1 style="font-size: clamp(38px, 4.6vw, 60px); line-height: 1.06; letter-spacing: -0.02em; font-weight: 700; margin: 0 0 16px; color: var(--gla-ink-900);">Life at <span style="font-family: var(--font-serif); font-style: italic; font-weight: 600; color: var(--gla-green-700);">Maheshwaram</span></h1>
+      <p style="font-size: 18px; line-height: 1.6; color: var(--gla-ink-500); margin: 0;">Pens on the bar, paper on the shelves, and the small moments in between. Filter by what you'd like to see.</p>
+    </div>
+  </section>
+
+  <!-- Filters + grid -->
+  <section style="padding: 40px 0 100px; background: var(--gla-cream-50);">
+    <div style="max-width: 1280px; margin: 0 auto; padding: 0 56px;">
+      <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-bottom: 44px;">
+        <button data-filter="all" style="padding: 11px 22px; border-radius: 999px; border: 1.5px solid var(--gla-green-800); background: var(--gla-green-800); color: var(--gla-cream-50); font-family: var(--font-sans); font-size: 14px; font-weight: 600; cursor: pointer; transition: all var(--duration) var(--easing-soft);">All</button>
+        <button data-filter="pens" style="padding: 11px 22px; border-radius: 999px; border: 1.5px solid var(--gla-cream-300); background: var(--gla-white); color: var(--gla-ink-700); font-family: var(--font-sans); font-size: 14px; font-weight: 600; cursor: pointer; transition: all var(--duration) var(--easing-soft);">Pens &amp; Inks</button>
+        <button data-filter="journals" style="padding: 11px 22px; border-radius: 999px; border: 1.5px solid var(--gla-cream-300); background: var(--gla-white); color: var(--gla-ink-700); font-family: var(--font-sans); font-size: 14px; font-weight: 600; cursor: pointer; transition: all var(--duration) var(--easing-soft);">Journals</button>
+        <button data-filter="art" style="padding: 11px 22px; border-radius: 999px; border: 1.5px solid var(--gla-cream-300); background: var(--gla-white); color: var(--gla-ink-700); font-family: var(--font-sans); font-size: 14px; font-weight: 600; cursor: pointer; transition: all var(--duration) var(--easing-soft);">Art &amp; Craft</button>
+        <button data-filter="gifting" style="padding: 11px 22px; border-radius: 999px; border: 1.5px solid var(--gla-cream-300); background: var(--gla-white); color: var(--gla-ink-700); font-family: var(--font-sans); font-size: 14px; font-weight: 600; cursor: pointer; transition: all var(--duration) var(--easing-soft);">Gifting</button>
+        <button data-filter="shop" style="padding: 11px 22px; border-radius: 999px; border: 1.5px solid var(--gla-cream-300); background: var(--gla-white); color: var(--gla-ink-700); font-family: var(--font-sans); font-size: 14px; font-weight: 600; cursor: pointer; transition: all var(--duration) var(--easing-soft);">The Shop</button>
+      </div>
+
+      <div class="mhs-masonry">
+        <figure data-cat="pens" style="margin: 0; border-radius: 18px; overflow: hidden; box-shadow: var(--elev-1); position: relative; border: 1px solid var(--gla-cream-300);"><x-import component-from-global-scope="image-slot" from="./image-slot.js" id="gal-1" shape="rect" placeholder="Pen photo" style="width: 100%; height: 300px; display: block;" hint-size="100%,300px"></x-import><figcaption style="position: absolute; left: 0; right: 0; bottom: 0; padding: 28px 16px 14px; background: linear-gradient(transparent, rgba(7,48,30,0.78)); color: var(--gla-cream-50); font-size: 13.5px; font-weight: 600;">Heritage Brass Fountain Pen</figcaption></figure>
+        <figure data-cat="shop" style="margin: 0; border-radius: 18px; overflow: hidden; box-shadow: var(--elev-1); position: relative; border: 1px solid var(--gla-cream-300);"><x-import component-from-global-scope="image-slot" from="./image-slot.js" id="gal-2" shape="rect" placeholder="Shop photo" style="width: 100%; height: 220px; display: block;" hint-size="100%,220px"></x-import><figcaption style="position: absolute; left: 0; right: 0; bottom: 0; padding: 28px 16px 14px; background: linear-gradient(transparent, rgba(7,48,30,0.78)); color: var(--gla-cream-50); font-size: 13.5px; font-weight: 600;">The shopfront on Heritage Lane</figcaption></figure>
+        <figure data-cat="journals" style="margin: 0; border-radius: 18px; overflow: hidden; box-shadow: var(--elev-1); position: relative; border: 1px solid var(--gla-cream-300);"><x-import component-from-global-scope="image-slot" from="./image-slot.js" id="gal-3" shape="rect" placeholder="Journal photo" style="width: 100%; height: 260px; display: block;" hint-size="100%,260px"></x-import><figcaption style="position: absolute; left: 0; right: 0; bottom: 0; padding: 28px 16px 14px; background: linear-gradient(transparent, rgba(7,48,30,0.78)); color: var(--gla-cream-50); font-size: 13.5px; font-weight: 600;">Cotton-paper bound journals</figcaption></figure>
+        <figure data-cat="art" style="margin: 0; border-radius: 18px; overflow: hidden; box-shadow: var(--elev-1); position: relative; border: 1px solid var(--gla-cream-300);"><x-import component-from-global-scope="image-slot" from="./image-slot.js" id="gal-4" shape="rect" placeholder="Art photo" style="width: 100%; height: 320px; display: block;" hint-size="100%,320px"></x-import><figcaption style="position: absolute; left: 0; right: 0; bottom: 0; padding: 28px 16px 14px; background: linear-gradient(transparent, rgba(7,48,30,0.78)); color: var(--gla-cream-50); font-size: 13.5px; font-weight: 600;">Watercolour pans &amp; brushes</figcaption></figure>
+        <figure data-cat="pens" style="margin: 0; border-radius: 18px; overflow: hidden; box-shadow: var(--elev-1); position: relative; border: 1px solid var(--gla-cream-300);"><x-import component-from-global-scope="image-slot" from="./image-slot.js" id="gal-5" shape="rect" placeholder="Ink photo" style="width: 100%; height: 240px; display: block;" hint-size="100%,240px"></x-import><figcaption style="position: absolute; left: 0; right: 0; bottom: 0; padding: 28px 16px 14px; background: linear-gradient(transparent, rgba(7,48,30,0.78)); color: var(--gla-cream-50); font-size: 13.5px; font-weight: 600;">Monsoon ink, indigo</figcaption></figure>
+        <figure data-cat="gifting" style="margin: 0; border-radius: 18px; overflow: hidden; box-shadow: var(--elev-1); position: relative; border: 1px solid var(--gla-cream-300);"><x-import component-from-global-scope="image-slot" from="./image-slot.js" id="gal-6" shape="rect" placeholder="Gift photo" style="width: 100%; height: 300px; display: block;" hint-size="100%,300px"></x-import><figcaption style="position: absolute; left: 0; right: 0; bottom: 0; padding: 28px 16px 14px; background: linear-gradient(transparent, rgba(7,48,30,0.78)); color: var(--gla-cream-50); font-size: 13.5px; font-weight: 600;">Hand-wrapped gift sets</figcaption></figure>
+        <figure data-cat="shop" style="margin: 0; border-radius: 18px; overflow: hidden; box-shadow: var(--elev-1); position: relative; border: 1px solid var(--gla-cream-300);"><x-import component-from-global-scope="image-slot" from="./image-slot.js" id="gal-7" shape="rect" placeholder="Shop photo" style="width: 100%; height: 260px; display: block;" hint-size="100%,260px"></x-import><figcaption style="position: absolute; left: 0; right: 0; bottom: 0; padding: 28px 16px 14px; background: linear-gradient(transparent, rgba(7,48,30,0.78)); color: var(--gla-cream-50); font-size: 13.5px; font-weight: 600;">The nib bar at work</figcaption></figure>
+        <figure data-cat="journals" style="margin: 0; border-radius: 18px; overflow: hidden; box-shadow: var(--elev-1); position: relative; border: 1px solid var(--gla-cream-300);"><x-import component-from-global-scope="image-slot" from="./image-slot.js" id="gal-8" shape="rect" placeholder="Journal photo" style="width: 100%; height: 220px; display: block;" hint-size="100%,220px"></x-import><figcaption style="position: absolute; left: 0; right: 0; bottom: 0; padding: 28px 16px 14px; background: linear-gradient(transparent, rgba(7,48,30,0.78)); color: var(--gla-cream-50); font-size: 13.5px; font-weight: 600;">Planners for the new year</figcaption></figure>
+        <figure data-cat="art" style="margin: 0; border-radius: 18px; overflow: hidden; box-shadow: var(--elev-1); position: relative; border: 1px solid var(--gla-cream-300);"><x-import component-from-global-scope="image-slot" from="./image-slot.js" id="gal-9" shape="rect" placeholder="Art photo" style="width: 100%; height: 250px; display: block;" hint-size="100%,250px"></x-import><figcaption style="position: absolute; left: 0; right: 0; bottom: 0; padding: 28px 16px 14px; background: linear-gradient(transparent, rgba(7,48,30,0.78)); color: var(--gla-cream-50); font-size: 13.5px; font-weight: 600;">Brushes, ready for class</figcaption></figure>
+        <figure data-cat="pens" style="margin: 0; border-radius: 18px; overflow: hidden; box-shadow: var(--elev-1); position: relative; border: 1px solid var(--gla-cream-300);"><x-import component-from-global-scope="image-slot" from="./image-slot.js" id="gal-10" shape="rect" placeholder="Pen photo" style="width: 100%; height: 280px; display: block;" hint-size="100%,280px"></x-import><figcaption style="position: absolute; left: 0; right: 0; bottom: 0; padding: 28px 16px 14px; background: linear-gradient(transparent, rgba(7,48,30,0.78)); color: var(--gla-cream-50); font-size: 13.5px; font-weight: 600;">Rollerball trio, matte finish</figcaption></figure>
+        <figure data-cat="gifting" style="margin: 0; border-radius: 18px; overflow: hidden; box-shadow: var(--elev-1); position: relative; border: 1px solid var(--gla-cream-300);"><x-import component-from-global-scope="image-slot" from="./image-slot.js" id="gal-11" shape="rect" placeholder="Gift photo" style="width: 100%; height: 230px; display: block;" hint-size="100%,230px"></x-import><figcaption style="position: absolute; left: 0; right: 0; bottom: 0; padding: 28px 16px 14px; background: linear-gradient(transparent, rgba(7,48,30,0.78)); color: var(--gla-cream-50); font-size: 13.5px; font-weight: 600;">Letterpress card boxes</figcaption></figure>
+        <figure data-cat="shop" style="margin: 0; border-radius: 18px; overflow: hidden; box-shadow: var(--elev-1); position: relative; border: 1px solid var(--gla-cream-300);"><x-import component-from-global-scope="image-slot" from="./image-slot.js" id="gal-12" shape="rect" placeholder="Shop photo" style="width: 100%; height: 300px; display: block;" hint-size="100%,300px"></x-import><figcaption style="position: absolute; left: 0; right: 0; bottom: 0; padding: 28px 16px 14px; background: linear-gradient(transparent, rgba(7,48,30,0.78)); color: var(--gla-cream-50); font-size: 13.5px; font-weight: 600;">A quiet morning, before opening</figcaption></figure>
+      </div>
+
+      <div style="text-align: center; margin-top: 64px;">
+        <p style="font-size: 16px; color: var(--gla-ink-500); margin: 0 0 20px;">Want to see something in person?</p>
+        <a href="Contact.dc.html" style="display: inline-flex; align-items: center; gap: 9px; background: var(--gla-green-800); color: var(--gla-cream-50); padding: 15px 30px; border-radius: 999px; font-size: 15px; font-weight: 600; text-decoration: none; box-shadow: var(--elev-2); transition: background var(--duration) var(--easing-soft);" style-hover="background: #083428;">Plan a visit →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer style="background: var(--gla-green-900); color: rgba(247,245,238,0.72); padding: 72px 0 0;">
+    <div style="max-width: 1280px; margin: 0 auto; padding: 0 56px;">
+      <div style="display: grid; grid-template-columns: 1.6fr 1fr 1fr 1.2fr; gap: 48px; padding-bottom: 52px; border-bottom: 1px solid rgba(255,255,255,0.12);">
+        <div>
+          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 18px;">
+            <span style="width: 40px; height: 40px; border-radius: 50%; background: var(--gla-cream-50); border: 1.5px solid var(--gla-gold-500); display: flex; align-items: center; justify-content: center; color: var(--gla-green-800); font-family: var(--font-serif); font-style: italic; font-weight: 700; font-size: 21px;">M</span>
+            <span style="font-family: var(--font-serif); font-style: italic; font-weight: 600; font-size: 21px; color: var(--gla-white);">Maheshwaram</span>
+          </div>
+          <p style="font-size: 14.5px; line-height: 1.6; color: rgba(247,245,238,0.6); margin: 0 0 20px; max-width: 34ch;">Fine stationery &amp; writing goods, kept on a quiet lane in Mathura since 2012.</p>
+          <div style="display: flex; gap: 10px;">
+            <a href="Contact.dc.html" aria-label="Instagram" style="width: 38px; height: 38px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.2); display: flex; align-items: center; justify-content: center; color: rgba(247,245,238,0.8); transition: all var(--duration) var(--easing-soft);" style-hover="background: var(--gla-gold-500); color: var(--gla-ink-900); border-color: var(--gla-gold-500);"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"></circle></svg></a>
+            <a href="Contact.dc.html" aria-label="Facebook" style="width: 38px; height: 38px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.2); display: flex; align-items: center; justify-content: center; color: rgba(247,245,238,0.8); transition: all var(--duration) var(--easing-soft);" style-hover="background: var(--gla-gold-500); color: var(--gla-ink-900); border-color: var(--gla-gold-500);"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H8v3h3v7h3v-7h3l1-3h-4V9c0-.6.4-1 1-1z"></path></svg></a>
+            <a href="Contact.dc.html" aria-label="WhatsApp" style="width: 38px; height: 38px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.2); display: flex; align-items: center; justify-content: center; color: rgba(247,245,238,0.8); transition: all var(--duration) var(--easing-soft);" style-hover="background: var(--gla-gold-500); color: var(--gla-ink-900); border-color: var(--gla-gold-500);"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-2.8.9.9-2.8-.2-.3A8 8 0 1 1 12 20zm4.4-5.9c-.2-.1-1.4-.7-1.6-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.5 6.5 0 0 1-3.2-2.8c-.2-.4.2-.4.6-1.2a.5.5 0 0 0 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.6 4c2.4 1 2.4.7 2.8.6a2.5 2.5 0 0 0 1.7-1.2 2 2 0 0 0 .1-1.2c0-.1-.2-.2-.5-.3z"></path></svg></a>
+          </div>
+        </div>
+        <div>
+          <h4 style="font-size: 13px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gla-gold-300); margin: 0 0 18px;">Shop</h4>
+          <div style="display: flex; flex-direction: column; gap: 12px;">
+            <a href="Home.dc.html#categories" style="font-size: 14.5px; color: rgba(247,245,238,0.7); text-decoration: none;" style-hover="color: var(--gla-white);">Writing Instruments</a>
+            <a href="Home.dc.html#categories" style="font-size: 14.5px; color: rgba(247,245,238,0.7); text-decoration: none;" style-hover="color: var(--gla-white);">Notebooks &amp; Journals</a>
+            <a href="Home.dc.html#categories" style="font-size: 14.5px; color: rgba(247,245,238,0.7); text-decoration: none;" style-hover="color: var(--gla-white);">Art &amp; Craft</a>
+            <a href="Home.dc.html#categories" style="font-size: 14.5px; color: rgba(247,245,238,0.7); text-decoration: none;" style-hover="color: var(--gla-white);">Office &amp; Desk</a>
+            <a href="Home.dc.html#categories" style="font-size: 14.5px; color: rgba(247,245,238,0.7); text-decoration: none;" style-hover="color: var(--gla-white);">Gifting &amp; Planners</a>
+          </div>
+        </div>
+        <div>
+          <h4 style="font-size: 13px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gla-gold-300); margin: 0 0 18px;">Explore</h4>
+          <div style="display: flex; flex-direction: column; gap: 12px;">
+            <a href="Home.dc.html" style="font-size: 14.5px; color: rgba(247,245,238,0.7); text-decoration: none;" style-hover="color: var(--gla-white);">Home</a>
+            <a href="Gallery.dc.html" style="font-size: 14.5px; color: rgba(247,245,238,0.7); text-decoration: none;" style-hover="color: var(--gla-white);">Gallery</a>
+            <a href="About.dc.html" style="font-size: 14.5px; color: rgba(247,245,238,0.7); text-decoration: none;" style-hover="color: var(--gla-white);">About Us</a>
+            <a href="Contact.dc.html" style="font-size: 14.5px; color: rgba(247,245,238,0.7); text-decoration: none;" style-hover="color: var(--gla-white);">Contact</a>
+          </div>
+        </div>
+        <div>
+          <h4 style="font-size: 13px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gla-gold-300); margin: 0 0 18px;">Visit</h4>
+          <p style="font-size: 14.5px; line-height: 1.6; color: rgba(247,245,238,0.7); margin: 0 0 10px;">14 Heritage Lane, Civil Lines,<br>Mathura, UP 281001</p>
+          <p style="font-size: 14.5px; line-height: 1.6; color: rgba(247,245,238,0.7); margin: 0;">+91 98765 43210<br><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="422a272e2e2d022f232a27312a352330232f6c2b2c">[email&#160;protected]</a></p>
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 26px 0; flex-wrap: wrap;">
+        <span style="font-size: 13px; color: rgba(247,245,238,0.5);">© 2026 Maheshwaram. Crafted with care in Mathura.</span>
+        <span style="font-size: 13px; color: rgba(247,245,238,0.5);">Terms · Privacy · Shipping &amp; Returns</span>
+      </div>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  componentDidMount() {
+    const header = document.getElementById("mhs-header");
+    const onScroll = () => {
+      if (!header) return;
+      header.style.boxShadow = window.scrollY > 10 ? "0 12px 40px -16px rgba(10,67,50,0.18)" : "none";
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+
+    const chips = Array.from(document.querySelectorAll("[data-filter]"));
+    const tiles = Array.from(document.querySelectorAll("figure[data-cat]"));
+    const setActive = (f) => {
+      chips.forEach((c) => {
+        const on = c.dataset.filter === f;
+        c.style.background = on ? "var(--gla-green-800)" : "var(--gla-white)";
+        c.style.color = on ? "var(--gla-cream-50)" : "var(--gla-ink-700)";
+        c.style.borderColor = on ? "var(--gla-green-800)" : "var(--gla-cream-300)";
+      });
+      tiles.forEach((t) => {
+        t.style.display = (f === "all" || t.dataset.cat === f) ? "" : "none";
+      });
+    };
+    chips.forEach((c) => c.addEventListener("click", () => setActive(c.dataset.filter)));
+    setActive("all");
+  }
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

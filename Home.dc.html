@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="./tokens.css">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--gla-cream-50); }
+  @keyframes mhs-marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  @keyframes mhs-rise { from { } to { opacity: 1; transform: none; } }
+  @keyframes mhs-float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+</style>
+</helmet>
+
+<div data-screen-label="Home (Direction A)" style="font-family: var(--font-sans); color: var(--gla-ink-900); background: var(--gla-cream-50); overflow-x: clip;">
+
+  <!-- Announcement ribbon -->
+  <div style="background: linear-gradient(90deg, var(--gla-gold-300), var(--gla-gold-500)); color: var(--gla-ink-900); overflow: hidden; white-space: nowrap;">
+    <div style="display: inline-flex; width: max-content; animation: mhs-marquee 38s linear infinite; font-size: 12.5px; font-weight: 600; letter-spacing: 0.05em; padding: 9px 0;">
+      <span style="padding: 0 28px;">NEW IN · The Monsoon Edit — handbound cotton-paper journals now in store</span>
+      <span style="padding: 0 28px;">·</span>
+      <span style="padding: 0 28px;">Complimentary gift-wrapping on orders over ₹999</span>
+      <span style="padding: 0 28px;">·</span>
+      <span style="padding: 0 28px;">Free monogramming on all leather goods this month</span>
+      <span style="padding: 0 28px;">·</span>
+      <span style="padding: 0 28px;">NEW IN · The Monsoon Edit — handbound cotton-paper journals now in store</span>
+      <span style="padding: 0 28px;">·</span>
+      <span style="padding: 0 28px;">Complimentary gift-wrapping on orders over ₹999</span>
+      <span style="padding: 0 28px;">·</span>
+      <span style="padding: 0 28px;">Free monogramming on all leather goods this month</span>
+      <span style="padding: 0 28px;">·</span>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header id="mhs-header" style="position: sticky; top: 0; z-index: 50; background: rgba(251,250,246,0.86); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--gla-cream-300); transition: box-shadow var(--duration) var(--easing-soft);">
+    <div style="max-width: 1280px; margin: 0 auto; padding: 0 56px; height: 78px; display: flex; align-items: center; justify-content: space-between; gap: 32px;">
+      <a href="Home.dc.html" style="display: flex; align-items: center; gap: 13px; text-decoration: none;">
+        <span style="width: 42px; height: 42px; border-radius: 50%; background: var(--gla-green-800); border: 1.5px solid var(--gla-gold-500); display: flex; align-items: center; justify-content: center; color: var(--gla-cream-50); font-family: var(--font-serif); font-style: italic; font-weight: 700; font-size: 22px; box-shadow: var(--elev-1);">M</span>
+        <span style="display: flex; flex-direction: column; line-height: 1;">
+          <span style="font-family: var(--font-serif); font-style: italic; font-weight: 600; font-size: 22px; color: var(--gla-green-800); letter-spacing: 0.01em;">Maheshwaram</span>
+          <span style="font-size: 9.5px; font-weight: 600; letter-spacing: 0.32em; text-transform: uppercase; color: var(--gla-ink-400); margin-top: 3px;">Fine Stationery</span>
+        </span>
+      </a>
+      <nav style="display: flex; align-items: center; gap: 30px;">
+        <a href="Home.dc.html" style="font-size: 14.5px; font-weight: 600; color: var(--gla-green-800); text-decoration: none;">Home</a>
+        <a href="#categories" style="font-size: 14.5px; font-weight: 500; color: var(--gla-ink-700); text-decoration: none;" style-hover="color: var(--gla-green-700);">Shop</a>
+        <a href="Gallery.dc.html" style="font-size: 14.5px; font-weight: 500; color: var(--gla-ink-700); text-decoration: none;" style-hover="color: var(--gla-green-700);">Gallery</a>
+        <a href="About.dc.html" style="font-size: 14.5px; font-weight: 500; color: var(--gla-ink-700); text-decoration: none;" style-hover="color: var(--gla-green-700);">About</a>
+        <a href="Contact.dc.html" style="font-size: 14.5px; font-weight: 500; color: var(--gla-ink-700); text-decoration: none;" style-hover="color: var(--gla-green-700);">Contact</a>
+      </nav>
+      <a href="Contact.dc.html" style="display: inline-flex; align-items: center; gap: 8px; background: var(--gla-green-800); color: var(--gla-cream-50); padding: 12px 22px; border-radius: 999px; font-size: 13.5px; font-weight: 600; text-decoration: none; box-shadow: var(--elev-1); transition: background var(--duration) var(--easing-soft);" style-hover="background: #083428;">Visit the Store</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section style="background: var(--gla-cream-100); position: relative; overflow: hidden;">
+    <div style="max-width: 1280px; margin: 0 auto; padding: 84px 56px 96px; display: grid; grid-template-columns: 1.02fr 1.1fr; gap: 64px; align-items: center;">
+      <div>
+        <span style="display: inline-flex; align-items: center; gap: 8px; font-size: 12.5px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gla-green-600); margin-bottom: 22px;">
+          <span style="width: 26px; height: 1.5px; background: var(--gla-gold-500); display: inline-block;"></span>The Heritage Collection
+        </span>
+        <h1 style="font-size: clamp(44px, 5vw, 68px); line-height: 1.04; letter-spacing: -0.02em; font-weight: 700; margin: 0 0 22px; color: var(--gla-ink-900);">Where every idea<br>finds its <span style="font-family: var(--font-serif); font-style: italic; font-weight: 600; color: var(--gla-green-700);">page</span>.</h1>
+        <p style="font-size: 18px; line-height: 1.62; color: var(--gla-ink-500); max-width: 46ch; margin: 0 0 32px;">Pens that glide, paper worth keeping, and desk goods made to last. Maheshwaram is a stationery house for thinkers, makers and letter-writers — thoughtfully sourced, beautifully kept.</p>
+        <div style="display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 38px;">
+          <a href="#categories" style="display: inline-flex; align-items: center; gap: 9px; background: var(--gla-green-800); color: var(--gla-cream-50); padding: 15px 30px; border-radius: 999px; font-size: 15px; font-weight: 600; text-decoration: none; box-shadow: var(--elev-2); transition: background var(--duration) var(--easing-soft), transform var(--duration) var(--easing-soft);" style-hover="background: #083428; transform: translateY(-2px);">Explore Collections →</a>
+          <a href="Gallery.dc.html" style="display: inline-flex; align-items: center; gap: 9px; background: transparent; color: var(--gla-green-800); padding: 15px 28px; border-radius: 999px; font-size: 15px; font-weight: 600; text-decoration: none; border: 1.5px solid var(--gla-green-800); transition: background var(--duration) var(--easing-soft);" style-hover="background: var(--gla-green-50);">View the Gallery</a>
+        </div>
+        <div style="display: flex; gap: 38px;">
+          <div><div style="font-size: 30px; font-weight: 700; color: var(--gla-green-800); letter-spacing: -0.02em;">1,200<span style="color: var(--gla-gold-500);">+</span></div><div style="font-size: 12.5px; color: var(--gla-ink-500); font-weight: 500;">Curated products</div></div>
+          <div style="width: 1px; background: var(--gla-cream-300);"></div>
+          <div><div style="font-size: 30px; font-weight: 700; color: var(--gla-green-800); letter-spacing: -0.02em;">40<span style="color: var(--gla-gold-500);">+</span></div><div style="font-size: 12.5px; color: var(--gla-ink-500); font-weight: 500;">Premium brands</div></div>
+          <div style="width: 1px; background: var(--gla-cream-300);"></div>
+          <div><div style="font-size: 30px; font-weight: 700; color: var(--gla-green-800); letter-spacing: -0.02em;">14</div><div style="font-size: 12.5px; color: var(--gla-ink-500); font-weight: 500;">Years in Mathura</div></div>
+        </div>
+      </div>
+
+      <div style="position: relative;">
+        <div style="position: relative; border-radius: 24px; overflow: hidden; box-shadow: var(--elev-3); border: 1px solid var(--gla-cream-300);">
+          <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="mhs-hero" shape="rect" placeholder="Drop a hero / collection photo" style="width: 100%; height: 480px; display: block;" hint-size="100%,480px"></x-import>
+          <div style="position: absolute; left: 22px; bottom: 22px; right: 22px; display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; pointer-events: none;">
+            <div style="background: rgba(251,250,246,0.92); backdrop-filter: blur(6px); border-radius: 16px; padding: 14px 18px; box-shadow: var(--elev-2);">
+              <div style="font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gla-green-600);">Featured</div>
+              <div style="font-size: 16px; font-weight: 600; color: var(--gla-ink-900); margin-top: 2px;">Heritage Brass Fountain Pen</div>
+            </div>
+            <div style="background: var(--gla-green-800); color: var(--gla-cream-50); border-radius: 999px; padding: 11px 18px; font-weight: 700; font-size: 15px; box-shadow: var(--elev-2);">₹2,450</div>
+          </div>
+        </div>
+        <div style="position: absolute; top: -22px; right: -10px; width: 92px; height: 92px; border-radius: 50%; background: var(--gla-gold-500); color: var(--gla-ink-900); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; box-shadow: var(--elev-2); animation: mhs-float 5s ease-in-out infinite; font-weight: 700;">
+          <span style="font-size: 10px; font-weight: 700; letter-spacing: 0.08em;">NEW</span>
+          <span style="font-size: 13px; line-height: 1; margin-top: 2px;">Edit</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories -->
+  <section id="categories" style="padding: 96px 0; background: var(--gla-cream-50);">
+    <div style="max-width: 1280px; margin: 0 auto; padding: 0 56px;">
+      <div data-reveal style="transition: opacity 0.7s var(--easing-soft), transform 0.7s var(--easing-soft); text-align: center; max-width: 680px; margin: 0 auto 52px;">
+        <span style="display: block; font-size: 12.5px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gla-green-600); margin-bottom: 14px;">Shop by Category</span>
+        <h2 style="font-size: clamp(30px, 3.6vw, 44px); line-height: 1.08; letter-spacing: -0.02em; font-weight: 700; margin: 0 0 14px; color: var(--gla-ink-900);">There's a desk for everyone — <span style="font-family: var(--font-serif); font-style: italic; font-weight: 600; color: var(--gla-green-700);">find yours</span>.</h2>
+        <p style="font-size: 17px; color: var(--gla-ink-500); margin: 0;">Six houses of stationery, each carefully edited. Click in to browse the shelves.</p>
+      </div>
+      <div data-reveal style="transition: opacity 0.7s var(--easing-soft) 0.08s, transform 0.7s var(--easing-soft) 0.08s; display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px;">
+
+        <a href="Gallery.dc.html" style="text-decoration: none; display: block; background: var(--gla-white); border: 1px solid var(--gla-cream-300); border-radius: 20px; overflow: hidden; box-shadow: var(--elev-1); transition: transform var(--duration) var(--easing-soft), box-shadow var(--duration) var(--easing-soft);" style-hover="transform: translateY(-5px); box-shadow: var(--elev-2);">
+          <div style="height: 160px; background: linear-gradient(135deg, var(--gla-green-50), var(--gla-cream-200)); display: flex; align-items: center; justify-content: center; color: var(--gla-green-700);">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path><path d="M2 2l7.586 7.586"></path><circle cx="11" cy="11" r="2"></circle></svg>
+          </div>
+          <div style="padding: 22px 22px 24px;">
+            <h3 style="font-size: 19px; font-weight: 600; margin: 0 0 6px; color: var(--gla-ink-900);">Writing Instruments</h3>
+            <p style="font-size: 14px; color: var(--gla-ink-500); margin: 0 0 12px; line-height: 1.5;">Fountain pens, rollerballs, inks &amp; refills.</p>
+            <span style="font-size: 13px; font-weight: 600; color: var(--gla-green-700);">Browse →</span>
+          </div>
+        </a>
+
+        <a href="Gallery.dc.html" style="text-decoration: none; display: block; background: var(--gla-white); border: 1px solid var(--gla-cream-300); border-radius: 20px; overflow: hidden; box-shadow: var(--elev-1); transition: transform var(--duration) var(--easing-soft), box-shadow var(--duration) var(--easing-soft);" style-hover="transform: translateY(-5px); box-shadow: var(--elev-2);">
+          <div style="height: 160px; background: linear-gradient(135deg, var(--gla-cream-200), var(--gla-gold-100)); display: flex; align-items: center; justify-content: center; color: var(--gla-green-700);">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+          </div>
+          <div style="padding: 22px 22px 24px;">
+            <h3 style="font-size: 19px; font-weight: 600; margin: 0 0 6px; color: var(--gla-ink-900);">Notebooks &amp; Journals</h3>
+            <p style="font-size: 14px; color: var(--gla-ink-500); margin: 0 0 12px; line-height: 1.5;">Bound, refillable, dotted &amp; plain.</p>
+            <span style="font-size: 13px; font-weight: 600; color: var(--gla-green-700);">Browse →</span>
+          </div>
+        </a>
+
+        <a href="Gallery.dc.html" style="text-decoration: none; display: block; background: var(--gla-white); border: 1px solid var(--gla-cream-300); border-radius: 20px; overflow: hidden; box-shadow: var(--elev-1); transition: transform var(--duration) var(--easing-soft), box-shadow var(--duration) var(--easing-soft);" style-hover="transform: translateY(-5px); box-shadow: var(--elev-2);">
+          <div style="height: 160px; background: linear-gradient(135deg, var(--gla-gold-100), var(--gla-green-100)); display: flex; align-items: center; justify-content: center; color: var(--gla-green-700);">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r="2.5"></circle><circle cx="17.5" cy="10.5" r="2.5"></circle><circle cx="8.5" cy="7.5" r="2.5"></circle><circle cx="6.5" cy="12.5" r="2.5"></circle><path d="M12 2a10 10 0 0 0 0 20c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.555C21.965 6.012 17.461 2 12 2z"></path></svg>
+          </div>
+          <div style="padding: 22px 22px 24px;">
+            <h3 style="font-size: 19px; font-weight: 600; margin: 0 0 6px; color: var(--gla-ink-900);">Art &amp; Craft</h3>
+            <p style="font-size: 14px; color: var(--gla-ink-500); margin: 0 0 12px; line-height: 1.5;">Watercolours, brushes, papers &amp; tools.</p>
+            <span style="font-size: 13px; font-weight: 600; color: var(--gla-green-700);">Browse →</span>
+          </div>
+        </a>
+
+        <a href="Gallery.dc.html" style="text-decoration: none; display: block; background: var(--gla-white); border: 1px solid var(--gla-cream-300); border-radius: 20px; overflow: hidden; box-shadow: var(--elev-1); transition: transform var(--duration) var(--easing-soft), box-shadow var(--duration) var(--easing-soft);" style-hover="transform: translateY(-5px); box-shadow: var(--elev-2);">
+          <div style="height: 160px; background: linear-gradient(135deg, var(--gla-green-100), var(--gla-cream-200)); display: flex; align-items: center; justify-content: center; color: var(--gla-green-700);">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"></rect><path d="M3 9h18"></path><path d="M8 4v5"></path><path d="M8 14h2"></path><path d="M14 14h2"></path></svg>
+          </div>
+          <div style="padding: 22px 22px 24px;">
+            <h3 style="font-size: 19px; font-weight: 600; margin: 0 0 6px; color: var(--gla-ink-900);">Office &amp; Desk</h3>
+            <p style="font-size: 14px; color: var(--gla-ink-500); margin: 0 0 12px; line-height: 1.5;">Organisers, staplers &amp; desk goods.</p>
+            <span style="font-size: 13px; font-weight: 600; color: var(--gla-green-700);">Browse →</span>
+          </div>
+        </a>
+
+        <a href="Gallery.dc.html" style="text-decoration: none; display: block; background: var(--gla-white); border: 1px solid var(--gla-cream-300); border-radius: 20px; overflow: hidden; box-shadow: var(--elev-1); transition: transform var(--duration) var(--easing-soft), box-shadow var(--duration) var(--easing-soft);" style-hover="transform: translateY(-5px); box-shadow: var(--elev-2);">
+          <div style="height: 160px; background: linear-gradient(135deg, var(--gla-cream-200), var(--gla-green-50)); display: flex; align-items: center; justify-content: center; color: var(--gla-green-700);">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="13" rx="2"></rect><path d="M3 8l9-5 9 5"></path><path d="M12 13v4"></path><path d="M9 21v-4h6v4"></path></svg>
+          </div>
+          <div style="padding: 22px 22px 24px;">
+            <h3 style="font-size: 19px; font-weight: 600; margin: 0 0 6px; color: var(--gla-ink-900);">Paper, Cards &amp; Gifting</h3>
+            <p style="font-size: 14px; color: var(--gla-ink-500); margin: 0 0 12px; line-height: 1.5;">Letterpress cards, wrap &amp; gift sets.</p>
+            <span style="font-size: 13px; font-weight: 600; color: var(--gla-green-700);">Browse →</span>
+          </div>
+        </a>
+
+        <a href="Gallery.dc.html" style="text-decoration: none; display: block; background: var(--gla-white); border: 1px solid var(--gla-cream-300); border-radius: 20px; overflow: hidden; box-shadow: var(--elev-1); transition: transform var(--duration) var(--easing-soft), box-shadow var(--duration) var(--easing-soft);" style-hover="transform: translateY(-5px); box-shadow: var(--elev-2);">
+          <div style="height: 160px; background: linear-gradient(135deg, var(--gla-green-50), var(--gla-gold-100)); display: flex; align-items: center; justify-content: center; color: var(--gla-green-700);">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"></rect><path d="M16 2v4"></path><path d="M8 2v4"></path><path d="M3 10h18"></path><path d="M8 14h.01"></path><path d="M12 14h.01"></path><path d="M16 14h.01"></path></svg>
+          </div>
+          <div style="padding: 22px 22px 24px;">
+            <h3 style="font-size: 19px; font-weight: 600; margin: 0 0 6px; color: var(--gla-ink-900);">Planners &amp; Calendars</h3>
+            <p style="font-size: 14px; color: var(--gla-ink-500); margin: 0 0 12px; line-height: 1.5;">Dated, undated &amp; wall planners.</p>
+            <span style="font-size: 13px; font-weight: 600; color: var(--gla-green-700);">Browse →</span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured / Bestsellers -->
+  <section style="padding: 96px 0; background: var(--gla-cream-100);">
+    <div style="max-width: 1280px; margin: 0 auto; padding: 0 56px;">
+      <div data-reveal style="transition: opacity 0.7s var(--easing-soft), transform 0.7s var(--easing-soft); display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; margin-bottom: 44px; flex-wrap: wrap;">
+        <div>
+          <span style="display: block; font-size: 12.5px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gla-green-600); margin-bottom: 12px;">Bestsellers</span>
+          <h2 style="font-size: clamp(30px, 3.6vw, 44px); line-height: 1.08; letter-spacing: -0.02em; font-weight: 700; margin: 0; color: var(--gla-ink-900);">Loved at the counter</h2>
+        </div>
+        <a href="Gallery.dc.html" style="font-size: 14.5px; font-weight: 600; color: var(--gla-green-700); text-decoration: none; padding-bottom: 4px; border-bottom: 1.5px solid var(--gla-gold-500);">See all bestsellers →</a>
+      </div>
+
+      <div data-reveal style="transition: opacity 0.7s var(--easing-soft) 0.08s, transform 0.7s var(--easing-soft) 0.08s; display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
+
+        <div style="background: var(--gla-white); border: 1px solid var(--gla-cream-300); border-radius: 20px; overflow: hidden; box-shadow: var(--elev-1); transition: transform var(--duration) var(--easing-soft), box-shadow var(--duration) var(--easing-soft);" style-hover="transform: translateY(-5px); box-shadow: var(--elev-2);">
+          <div style="position: relative;">
+            <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="mhs-feat-1" shape="rect" placeholder="Drop product photo" style="width: 100%; height: 250px; display: block;" hint-size="100%,250px"></x-import>
+            <span style="position: absolute; top: 14px; left: 14px; background: var(--gla-green-800); color: var(--gla-cream-50); font-size: 11px; font-weight: 600; letter-spacing: 0.04em; padding: 5px 11px; border-radius: 999px;">Bestseller</span>
+          </div>
+          <div style="padding: 20px 22px 24px; display: flex; flex-direction: column; gap: 4px;">
+            <span style="font-size: 12px; color: var(--gla-ink-400); font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase;">Writing</span>
+            <h3 style="font-size: 18px; font-weight: 600; margin: 0; color: var(--gla-ink-900);">Heritage Brass Fountain Pen</h3>
+            <p style="font-size: 13.5px; color: var(--gla-ink-500); margin: 4px 0 16px; line-height: 1.5;">Medium nib · solid brass barrel · gift-boxed.</p>
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+              <span style="font-size: 19px; font-weight: 700; color: var(--gla-green-800);">₹2,450</span>
+              <a href="Gallery.dc.html" style="font-size: 13px; font-weight: 600; color: var(--gla-green-700); text-decoration: none; border: 1.5px solid var(--gla-cream-300); padding: 8px 16px; border-radius: 999px; transition: all var(--duration) var(--easing-soft);" style-hover="border-color: var(--gla-green-800); background: var(--gla-green-50);">View</a>
+            </div>
+          </div>
+        </div>
+
+        <div style="background: var(--gla-white); border: 1px solid var(--gla-cream-300); border-radius: 20px; overflow: hidden; box-shadow: var(--elev-1); transition: transform var(--duration) var(--easing-soft), box-shadow var(--duration) var(--easing-soft);" style-hover="transform: translateY(-5px); box-shadow: var(--elev-2);">
+          <div style="position: relative;">
+            <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="mhs-feat-2" shape="rect" placeholder="Drop product photo" style="width: 100%; height: 250px; display: block;" hint-size="100%,250px"></x-import>
+          </div>
+          <div style="padding: 20px 22px 24px; display: flex; flex-direction: column; gap: 4px;">
+            <span style="font-size: 12px; color: var(--gla-ink-400); font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase;">Journals</span>
+            <h3 style="font-size: 18px; font-weight: 600; margin: 0; color: var(--gla-ink-900);">Cotton-Paper Bound Journal</h3>
+            <p style="font-size: 13.5px; color: var(--gla-ink-500); margin: 4px 0 16px; line-height: 1.5;">A5 · 192 pages · hand-stitched spine.</p>
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+              <span style="font-size: 19px; font-weight: 700; color: var(--gla-green-800);">₹890</span>
+              <a href="Gallery.dc.html" style="font-size: 13px; font-weight: 600; color: var(--gla-green-700); text-decoration: none; border: 1.5px solid var(--gla-cream-300); padding: 8px 16px; border-radius: 999px; transition: all var(--duration) var(--easing-soft);" style-hover="border-color: var(--gla-green-800); background: var(--gla-green-50);">View</a>
+            </div>
+          </div>
+        </div>
+
+        <div style="background: var(--gla-white); border: 1px solid var(--gla-cream-300); border-radius: 20px; overflow: hidden; box-shadow: var(--elev-1); transition: transform var(--duration) var(--easing-soft), box-shadow var(--duration) var(--easing-soft);" style-hover="transform: translateY(-5px); box-shadow: var(--elev-2);">
+          <div style="position: relative;">
+            <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="mhs-feat-3" shape="rect" placeholder="Drop product photo" style="width: 100%; height: 250px; display: block;" hint-size="100%,250px"></x-import>
+          </div>
+          <div style="padding: 20px 22px 24px; display: flex; flex-direction: column; gap: 4px;">
+            <span style="font-size: 12px; color: var(--gla-ink-400); font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase;">Writing</span>
+            <h3 style="font-size: 18px; font-weight: 600; margin: 0; color: var(--gla-ink-900);">Smooth-Flow Rollerball Set</h3>
+            <p style="font-size: 13.5px; color: var(--gla-ink-500); margin: 4px 0 16px; line-height: 1.5;">Set of three · 0.5mm · matte finish.</p>
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+              <span style="font-size: 19px; font-weight: 700; color: var(--gla-green-800);">₹1,180</span>
+              <a href="Gallery.dc.html" style="font-size: 13px; font-weight: 600; color: var(--gla-green-700); text-decoration: none; border: 1.5px solid var(--gla-cream-300); padding: 8px 16px; border-radius: 999px; transition: all var(--duration) var(--easing-soft);" style-hover="border-color: var(--gla-green-800); background: var(--gla-green-50);">View</a>
+            </div>
+          </div>
+        </div>
+
+        <div style="background: var(--gla-white); border: 1px solid var(--gla-cream-300); border-radius: 20px; overflow: hidden; box-shadow: var(--elev-1); transition: transform var(--duration) var(--easing-soft), box-shadow var(--duration) var(--easing-soft);" style-hover="transform: translateY(-5px); box-shadow: var(--elev-2);">
+          <div style="position: relative;">
+            <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="mhs-feat-4" shape="rect" placeholder="Drop product photo" style="width: 100%; height: 250px; display: block;" hint-size="100%,250px"></x-import>
+          </div>
+          <div style="padding: 20px 22px 24px; display: flex; flex-direction: column; gap: 4px;">
+            <span style="font-size: 12px; color: var(--gla-ink-400); font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase;">Gifting</span>
+            <h3 style="font-size: 18px; font-weight: 600; margin: 0; color: var(--gla-ink-900);">Letterpress Card Box</h3>
+            <p style="font-size: 13.5px; color: var(--gla-ink-500); margin: 4px 0 16px; line-height: 1.5;">Set of 12 · cotton stock · with envelopes.</p>
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+              <span style="font-size: 19px; font-weight: 700; color: var(--gla-green-800);">₹650</span>
+              <a href="Gallery.dc.html" style="font-size: 13px; font-weight: 600; color: var(--gla-green-700); text-decoration: none; border: 1.5px solid var(--gla-cream-300); padding: 8px 16px; border-radius: 999px; transition: all var(--duration) var(--easing-soft);" style-hover="border-color: var(--gla-green-800); background: var(--gla-green-50);">View</a>
+            </div>
+          </div>
+        </div>
+
+        <div style="background: var(--gla-white); border: 1px solid var(--gla-cream-300); border-radius: 20px; overflow: hidden; box-shadow: var(--elev-1); transition: transform var(--duration) var(--easing-soft), box-shadow var(--duration) var(--easing-soft);" style-hover="transform: translateY(-5px); box-shadow: var(--elev-2);">
+          <div style="position: relative;">
+            <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="mhs-feat-5" shape="rect" placeholder="Drop product photo" style="width: 100%; height: 250px; display: block;" hint-size="100%,250px"></x-import>
+          </div>
+          <div style="padding: 20px 22px 24px; display: flex; flex-direction: column; gap: 4px;">
+            <span style="font-size: 12px; color: var(--gla-ink-400); font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase;">Desk</span>
+            <h3 style="font-size: 18px; font-weight: 600; margin: 0; color: var(--gla-ink-900);">Linen Desk Organiser</h3>
+            <p style="font-size: 13.5px; color: var(--gla-ink-500); margin: 4px 0 16px; line-height: 1.5;">Five compartments · linen-wrapped board.</p>
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+              <span style="font-size: 19px; font-weight: 700; color: var(--gla-green-800);">₹1,950</span>
+              <a href="Gallery.dc.html" style="font-size: 13px; font-weight: 600; color: var(--gla-green-700); text-decoration: none; border: 1.5px solid var(--gla-cream-300); padding: 8px 16px; border-radius: 999px; transition: all var(--duration) var(--easing-soft);" style-hover="border-color: var(--gla-green-800); background: var(--gla-green-50);">View</a>
+            </div>
+          </div>
+        </div>
+
+        <div style="background: var(--gla-white); border: 1px solid var(--gla-cream-300); border-radius: 20px; overflow: hidden; box-shadow: var(--elev-1); transition: transform var(--duration) var(--easing-soft), box-shadow var(--duration) var(--easing-soft);" style-hover="transform: translateY(-5px); box-shadow: var(--elev-2);">
+          <div style="position: relative;">
+            <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="mhs-feat-6" shape="rect" placeholder="Drop product photo" style="width: 100%; height: 250px; display: block;" hint-size="100%,250px"></x-import>
+          </div>
+          <div style="padding: 20px 22px 24px; display: flex; flex-direction: column; gap: 4px;">
+            <span style="font-size: 12px; color: var(--gla-ink-400); font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase;">Art</span>
+            <h3 style="font-size: 18px; font-weight: 600; margin: 0; color: var(--gla-ink-900);">Watercolour Travel Kit</h3>
+            <p style="font-size: 13.5px; color: var(--gla-ink-500); margin: 4px 0 16px; line-height: 1.5;">24 pans · brush · tin palette included.</p>
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+              <span style="font-size: 19px; font-weight: 700; color: var(--gla-green-800);">₹2,200</span>
+              <a href="Gallery.dc.html" style="font-size: 13px; font-weight: 600; color: var(--gla-green-700); text-decoration: none; border: 1.5px solid var(--gla-cream-300); padding: 8px 16px; border-radius: 999px; transition: all var(--duration) var(--easing-soft);" style-hover="border-color: var(--gla-green-800); background: var(--gla-green-50);">View</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Brand story strip (green band) -->
+  <section style="padding: 100px 0; background: var(--gla-green-800); color: var(--gla-cream-100); position: relative; overflow: hidden;">
+    <div style="position: absolute; inset: 0; background: linear-gradient(180deg, var(--gla-green-700), var(--gla-green-900)); opacity: 0.55;"></div>
+    <div style="position: relative; max-width: 1280px; margin: 0 auto; padding: 0 56px; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center;">
+      <div data-reveal style="transition: opacity 0.7s var(--easing-soft), transform 0.7s var(--easing-soft);">
+        <span style="display: block; font-size: 12.5px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gla-green-200); margin-bottom: 16px;">Our Story</span>
+        <h2 style="font-size: clamp(30px, 3.6vw, 46px); line-height: 1.1; letter-spacing: -0.02em; font-weight: 700; margin: 0 0 20px; color: var(--gla-white);">A small shop with a <span style="font-family: var(--font-serif); font-style: italic; font-weight: 600; color: var(--gla-gold-300);">long memory</span>.</h2>
+        <p style="font-size: 17px; line-height: 1.65; color: rgba(247,245,238,0.82); margin: 0 0 16px; max-width: 48ch;">Maheshwaram began on a quiet lane in Mathura in 2012 — one wooden cabinet of fountain pens and a promise: stock only what we'd happily keep on our own desks.</p>
+        <p style="font-size: 17px; line-height: 1.65; color: rgba(247,245,238,0.82); margin: 0 0 30px; max-width: 48ch;">Fourteen years on, we still test every nib, fold every gift, and know our regulars by the ink they prefer.</p>
+        <a href="About.dc.html" style="display: inline-flex; align-items: center; gap: 9px; background: var(--gla-gold-500); color: var(--gla-ink-900); padding: 14px 28px; border-radius: 999px; font-size: 15px; font-weight: 600; text-decoration: none; box-shadow: var(--elev-2); transition: background var(--duration) var(--easing-soft);" style-hover="background: var(--gla-gold-700);">Read our story →</a>
+      </div>
+      <div data-reveal style="transition: opacity 0.7s var(--easing-soft) 0.1s, transform 0.7s var(--easing-soft) 0.1s; border-radius: 24px; overflow: hidden; box-shadow: var(--elev-3); border: 1px solid rgba(255,255,255,0.12);">
+        <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="mhs-story" shape="rect" placeholder="Drop a shop / studio photo" style="width: 100%; height: 420px; display: block;" hint-size="100%,420px"></x-import>
+      </div>
+    </div>
+  </section>
+
+  <!-- New arrivals -->
+  <section style="padding: 96px 0; background: var(--gla-cream-50);">
+    <div style="max-width: 1280px; margin: 0 auto; padding: 0 56px;">
+      <div data-reveal style="transition: opacity 0.7s var(--easing-soft), transform 0.7s var(--easing-soft); text-align: center; max-width: 640px; margin: 0 auto 48px;">
+        <span style="display: block; font-size: 12.5px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gla-green-600); margin-bottom: 14px;">New Arrivals</span>
+        <h2 style="font-size: clamp(30px, 3.6vw, 44px); line-height: 1.08; letter-spacing: -0.02em; font-weight: 700; margin: 0; color: var(--gla-ink-900);">Fresh on the shelves</h2>
+      </div>
+      <div data-reveal style="transition: opacity 0.7s var(--easing-soft) 0.08s, transform 0.7s var(--easing-soft) 0.08s; display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;">
+
+        <div style="background: var(--gla-white); border: 1px solid var(--gla-cream-300); border-radius: 18px; overflow: hidden; box-shadow: var(--elev-1); transition: transform var(--duration) var(--easing-soft), box-shadow var(--duration) var(--easing-soft);" style-hover="transform: translateY(-4px); box-shadow: var(--elev-2);">
+          <div style="height: 150px; background: linear-gradient(135deg, var(--gla-green-100), var(--gla-cream-200)); display: flex; align-items: center; justify-content: center; font-family: var(--font-serif); font-style: italic; color: var(--gla-green-700); font-size: 13px;">Indigo Monsoon Ink</div>
+          <div style="padding: 16px 18px 18px;">
+            <div style="display: flex; align-items: center; gap: 7px; margin-bottom: 7px;"><span style="width: 7px; height: 7px; border-radius: 50%; background: var(--gla-green-500);"></span><span style="font-size: 11px; font-weight: 600; color: var(--gla-green-600); letter-spacing: 0.04em; text-transform: uppercase;">Just in</span></div>
+            <h3 style="font-size: 15.5px; font-weight: 600; margin: 0 0 8px; color: var(--gla-ink-900);">Monsoon Ink — Indigo</h3>
+            <span style="font-size: 16px; font-weight: 700; color: var(--gla-green-800);">₹420</span>
+          </div>
+        </div>
+
+        <div style="background: var(--gla-white); border: 1px solid var(--gla-cream-300); border-radius: 18px; overflow: hidden; box-shadow: var(--elev-1); transition: transform var(--duration) var(--easing-soft), box-shadow var(--duration) var(--easing-soft);" style-hover="transform: translateY(-4px); box-shadow: var(--elev-2);">
+          <div style="height: 150px; background: linear-gradient(135deg, var(--gla-cream-200), var(--gla-gold-100)); display: flex; align-items: center; justify-content: center; font-family: var(--font-serif); font-style: italic; color: var(--gla-green-700); font-size: 13px;">A5 Dotted Refills</div>
+          <div style="padding: 16px 18px 18px;">
+            <div style="display: flex; align-items: center; gap: 7px; margin-bottom: 7px;"><span style="width: 7px; height: 7px; border-radius: 50%; background: var(--gla-green-500);"></span><span style="font-size: 11px; font-weight: 600; color: var(--gla-green-600); letter-spacing: 0.04em; text-transform: uppercase;">Just in</span></div>
+            <h3 style="font-size: 15.5px; font-weight: 600; margin: 0 0 8px; color: var(--gla-ink-900);">A5 Dotted Refill Pack</h3>
+            <span style="font-size: 16px; font-weight: 700; color: var(--gla-green-800);">₹260</span>
+          </div>
+        </div>
+
+        <div style="background: var(--gla-white); border: 1px solid var(--gla-cream-300); border-radius: 18px; overflow: hidden; box-shadow: var(--elev-1); transition: transform var(--duration) var(--easing-soft), box-shadow var(--duration) var(--easing-soft);" style-hover="transform: translateY(-4px); box-shadow: var(--elev-2);">
+          <div style="height: 150px; background: linear-gradient(135deg, var(--gla-gold-100), var(--gla-green-100)); display: flex; align-items: center; justify-content: center; font-family: var(--font-serif); font-style: italic; color: var(--gla-green-700); font-size: 13px;">Walnut Pen Rest</div>
+          <div style="padding: 16px 18px 18px;">
+            <div style="display: flex; align-items: center; gap: 7px; margin-bottom: 7px;"><span style="width: 7px; height: 7px; border-radius: 50%; background: var(--gla-green-500);"></span><span style="font-size: 11px; font-weight: 600; color: var(--gla-green-600); letter-spacing: 0.04em; text-transform: uppercase;">Just in</span></div>
+            <h3 style="font-size: 15.5px; font-weight: 600; margin: 0 0 8px; color: var(--gla-ink-900);">Walnut Pen Rest</h3>
+            <span style="font-size: 16px; font-weight: 700; color: var(--gla-green-800);">₹780</span>
+          </div>
+        </div>
+
+        <div style="background: var(--gla-white); border: 1px solid var(--gla-cream-300); border-radius: 18px; overflow: hidden; box-shadow: var(--elev-1); transition: transform var(--duration) var(--easing-soft), box-shadow var(--duration) var(--easing-soft);" style-hover="transform: translateY(-4px); box-shadow: var(--elev-2);">
+          <div style="height: 150px; background: linear-gradient(135deg, var(--gla-green-50), var(--gla-cream-200)); display: flex; align-items: center; justify-content: center; font-family: var(--font-serif); font-style: italic; color: var(--gla-green-700); font-size: 13px;">2026 Wall Planner</div>
+          <div style="padding: 16px 18px 18px;">
+            <div style="display: flex; align-items: center; gap: 7px; margin-bottom: 7px;"><span style="width: 7px; height: 7px; border-radius: 50%; background: var(--gla-green-500);"></span><span style="font-size: 11px; font-weight: 600; color: var(--gla-green-600); letter-spacing: 0.04em; text-transform: uppercase;">Just in</span></div>
+            <h3 style="font-size: 15.5px; font-weight: 600; margin: 0 0 8px; color: var(--gla-ink-900);">2026 Linen Wall Planner</h3>
+            <span style="font-size: 16px; font-weight: 700; color: var(--gla-green-800);">₹540</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section style="padding: 96px 0; background: var(--gla-cream-100);">
+    <div style="max-width: 1280px; margin: 0 auto; padding: 0 56px;">
+      <div data-reveal style="transition: opacity 0.7s var(--easing-soft), transform 0.7s var(--easing-soft); text-align: center; max-width: 640px; margin: 0 auto 52px;">
+        <span style="display: block; font-size: 12.5px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gla-green-600); margin-bottom: 14px;">Kind Words</span>
+        <h2 style="font-size: clamp(30px, 3.6vw, 44px); line-height: 1.08; letter-spacing: -0.02em; font-weight: 700; margin: 0; color: var(--gla-ink-900);">Loved by the people who write</h2>
+      </div>
+      <div data-reveal style="transition: opacity 0.7s var(--easing-soft) 0.08s, transform 0.7s var(--easing-soft) 0.08s; display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
+
+        <div style="background: var(--gla-white); border: 1px solid var(--gla-cream-300); border-radius: 20px; padding: 32px 28px; box-shadow: var(--elev-1); display: flex; flex-direction: column;">
+          <div style="display: flex; gap: 3px; margin-bottom: 16px; color: var(--gla-gold-500);">★★★★★</div>
+          <p style="font-family: var(--font-serif); font-style: italic; font-size: 18px; line-height: 1.55; color: var(--gla-ink-700); margin: 0 0 24px;">"The only place in town that lets you test a nib before you buy. My fountain pen has lasted six years and counting."</p>
+          <div style="display: flex; align-items: center; gap: 12px; margin-top: auto;">
+            <span style="width: 42px; height: 42px; border-radius: 50%; background: var(--gla-green-100); color: var(--gla-green-800); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 15px;">AR</span>
+            <div><div style="font-size: 14.5px; font-weight: 600; color: var(--gla-ink-900);">Ananya Rao</div><div style="font-size: 12.5px; color: var(--gla-ink-500);">Architect</div></div>
+          </div>
+        </div>
+
+        <div style="background: var(--gla-white); border: 1px solid var(--gla-cream-300); border-radius: 20px; padding: 32px 28px; box-shadow: var(--elev-1); display: flex; flex-direction: column;">
+          <div style="display: flex; gap: 3px; margin-bottom: 16px; color: var(--gla-gold-500);">★★★★★</div>
+          <p style="font-family: var(--font-serif); font-style: italic; font-size: 18px; line-height: 1.55; color: var(--gla-ink-700); margin: 0 0 24px;">"I buy all my studio supplies here. The paper selection is unmatched and the staff actually know what bleeds and what doesn't."</p>
+          <div style="display: flex; align-items: center; gap: 12px; margin-top: auto;">
+            <span style="width: 42px; height: 42px; border-radius: 50%; background: var(--gla-gold-100); color: var(--gla-gold-700); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 15px;">VK</span>
+            <div><div style="font-size: 14.5px; font-weight: 600; color: var(--gla-ink-900);">Vikram Kapoor</div><div style="font-size: 12.5px; color: var(--gla-ink-500);">Illustrator</div></div>
+          </div>
+        </div>
+
+        <div style="background: var(--gla-white); border: 1px solid var(--gla-cream-300); border-radius: 20px; padding: 32px 28px; box-shadow: var(--elev-1); display: flex; flex-direction: column;">
+          <div style="display: flex; gap: 3px; margin-bottom: 16px; color: var(--gla-gold-500);">★★★★★</div>
+          <p style="font-family: var(--font-serif); font-style: italic; font-size: 18px; line-height: 1.55; color: var(--gla-ink-700); margin: 0 0 24px;">"Their gift-wrapping turns a ₹500 notebook into something that feels like a treasure. I never shop anywhere else for presents."</p>
+          <div style="display: flex; align-items: center; gap: 12px; margin-top: auto;">
+            <span style="width: 42px; height: 42px; border-radius: 50%; background: var(--gla-green-100); color: var(--gla-green-800); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 15px;">MS</span>
+            <div><div style="font-size: 14.5px; font-weight: 600; color: var(--gla-ink-900);">Meera Shah</div><div style="font-size: 12.5px; color: var(--gla-ink-500);">Teacher</div></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery teaser -->
+  <section style="padding: 96px 0; background: var(--gla-cream-50);">
+    <div style="max-width: 1280px; margin: 0 auto; padding: 0 56px;">
+      <div data-reveal style="transition: opacity 0.7s var(--easing-soft), transform 0.7s var(--easing-soft); display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; margin-bottom: 40px; flex-wrap: wrap;">
+        <div>
+          <span style="display: block; font-size: 12.5px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gla-green-600); margin-bottom: 12px;">From the Shop · @maheshwaram</span>
+          <h2 style="font-size: clamp(30px, 3.6vw, 44px); line-height: 1.08; letter-spacing: -0.02em; font-weight: 700; margin: 0; color: var(--gla-ink-900);">Life at the counter</h2>
+        </div>
+        <a href="Gallery.dc.html" style="font-size: 14.5px; font-weight: 600; color: var(--gla-green-700); text-decoration: none; padding-bottom: 4px; border-bottom: 1.5px solid var(--gla-gold-500);">Open the gallery →</a>
+      </div>
+      <div data-reveal style="transition: opacity 0.7s var(--easing-soft) 0.08s, transform 0.7s var(--easing-soft) 0.08s; display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px;">
+        <a href="Gallery.dc.html" style="display: block; border-radius: 16px; overflow: hidden; box-shadow: var(--elev-1);"><x-import component-from-global-scope="image-slot" from="./image-slot.js" id="mhs-gal-1" shape="rect" placeholder="Photo" style="width: 100%; height: 150px; display: block;" hint-size="100%,150px"></x-import></a>
+        <a href="Gallery.dc.html" style="display: block; border-radius: 16px; overflow: hidden; box-shadow: var(--elev-1);"><x-import component-from-global-scope="image-slot" from="./image-slot.js" id="mhs-gal-2" shape="rect" placeholder="Photo" style="width: 100%; height: 150px; display: block;" hint-size="100%,150px"></x-import></a>
+        <a href="Gallery.dc.html" style="display: block; border-radius: 16px; overflow: hidden; box-shadow: var(--elev-1);"><x-import component-from-global-scope="image-slot" from="./image-slot.js" id="mhs-gal-3" shape="rect" placeholder="Photo" style="width: 100%; height: 150px; display: block;" hint-size="100%,150px"></x-import></a>
+        <a href="Gallery.dc.html" style="display: block; border-radius: 16px; overflow: hidden; box-shadow: var(--elev-1);"><x-import component-from-global-scope="image-slot" from="./image-slot.js" id="mhs-gal-4" shape="rect" placeholder="Photo" style="width: 100%; height: 150px; display: block;" hint-size="100%,150px"></x-import></a>
+        <a href="Gallery.dc.html" style="display: block; border-radius: 16px; overflow: hidden; box-shadow: var(--elev-1);"><x-import component-from-global-scope="image-slot" from="./image-slot.js" id="mhs-gal-5" shape="rect" placeholder="Photo" style="width: 100%; height: 150px; display: block;" hint-size="100%,150px"></x-import></a>
+        <a href="Gallery.dc.html" style="display: block; border-radius: 16px; overflow: hidden; box-shadow: var(--elev-1);"><x-import component-from-global-scope="image-slot" from="./image-slot.js" id="mhs-gal-6" shape="rect" placeholder="Photo" style="width: 100%; height: 150px; display: block;" hint-size="100%,150px"></x-import></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section style="padding: 92px 0; background: var(--gla-green-800); color: var(--gla-cream-100);">
+    <div style="max-width: 760px; margin: 0 auto; padding: 0 56px; text-align: center;">
+      <span style="display: block; font-size: 12.5px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gla-green-200); margin-bottom: 16px;">Stay in Touch</span>
+      <h2 style="font-size: clamp(28px, 3.4vw, 42px); line-height: 1.12; letter-spacing: -0.02em; font-weight: 700; margin: 0 0 16px; color: var(--gla-white);">First to know, first to the <span style="font-family: var(--font-serif); font-style: italic; font-weight: 600; color: var(--gla-gold-300);">new ink</span>.</h2>
+      <p style="font-size: 17px; line-height: 1.6; color: rgba(247,245,238,0.8); margin: 0 0 30px;">A quiet letter, once a month — new arrivals, workshops at the shop, and the occasional members-only discount.</p>
+      <form onSubmit="{{ submitNews }}" style="display: flex; gap: 10px; max-width: 480px; margin: 0 auto; flex-wrap: wrap; justify-content: center;">
+        <input type="email" value="{{ news }}" onInput="{{ onNews }}" placeholder="you@example.com" style="flex: 1; min-width: 220px; padding: 15px 20px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.25); background: rgba(255,255,255,0.08); color: var(--gla-white); font-size: 15px; font-family: var(--font-sans); outline: none;" />
+        <button type="submit" style="background: var(--gla-gold-500); color: var(--gla-ink-900); padding: 15px 30px; border-radius: 999px; border: none; font-size: 15px; font-weight: 600; cursor: pointer; font-family: var(--font-sans); transition: background var(--duration) var(--easing-soft);" style-hover="background: var(--gla-gold-700);">Subscribe</button>
+      </form>
+      <div style="min-height: 22px; margin-top: 14px; font-size: 14px; font-weight: 500; color: var(--gla-gold-300);">{{ newsMsg }}</div>
+    </div>
+  </section>
+
+  <!-- Visit us -->
+  <section style="padding: 96px 0; background: var(--gla-cream-100);">
+    <div style="max-width: 1280px; margin: 0 auto; padding: 0 56px; display: grid; grid-template-columns: 1fr 1.05fr; gap: 56px; align-items: center;">
+      <div data-reveal style="transition: opacity 0.7s var(--easing-soft), transform 0.7s var(--easing-soft);">
+        <span style="display: block; font-size: 12.5px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gla-green-600); margin-bottom: 14px;">Visit Us</span>
+        <h2 style="font-size: clamp(28px, 3.4vw, 42px); line-height: 1.1; letter-spacing: -0.02em; font-weight: 700; margin: 0 0 18px; color: var(--gla-ink-900);">Come browse the shelves</h2>
+        <p style="font-size: 17px; line-height: 1.6; color: var(--gla-ink-500); margin: 0 0 28px; max-width: 44ch;">Pull up a stool at the nib bar, test a few pens, and let us wrap something beautiful. Tea is on us.</p>
+        <div style="display: flex; flex-direction: column; gap: 18px; margin-bottom: 30px;">
+          <div style="display: flex; gap: 14px; align-items: flex-start;">
+            <span style="width: 40px; height: 40px; border-radius: 12px; background: var(--gla-green-100); color: var(--gla-green-800); display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></span>
+            <div><div style="font-size: 15px; font-weight: 600; color: var(--gla-ink-900);">14 Heritage Lane, Civil Lines</div><div style="font-size: 14px; color: var(--gla-ink-500);">Mathura, Uttar Pradesh 281001</div></div>
+          </div>
+          <div style="display: flex; gap: 14px; align-items: flex-start;">
+            <span style="width: 40px; height: 40px; border-radius: 12px; background: var(--gla-green-100); color: var(--gla-green-800); display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></span>
+            <div><div style="font-size: 15px; font-weight: 600; color: var(--gla-ink-900);">Mon – Sat · 10:00 am – 8:30 pm</div><div style="font-size: 14px; color: var(--gla-ink-500);">Sunday · 11:00 am – 6:00 pm</div></div>
+          </div>
+        </div>
+        <a href="Contact.dc.html" style="display: inline-flex; align-items: center; gap: 9px; background: var(--gla-green-800); color: var(--gla-cream-50); padding: 14px 28px; border-radius: 999px; font-size: 15px; font-weight: 600; text-decoration: none; box-shadow: var(--elev-2); transition: background var(--duration) var(--easing-soft);" style-hover="background: #083428;">Get directions →</a>
+      </div>
+      <div data-reveal style="transition: opacity 0.7s var(--easing-soft) 0.1s, transform 0.7s var(--easing-soft) 0.1s; position: relative; height: 380px; border-radius: 24px; overflow: hidden; box-shadow: var(--elev-2); border: 1px solid var(--gla-cream-300); background:
+        radial-gradient(circle at 70% 30%, var(--gla-green-50), transparent 60%),
+        repeating-linear-gradient(0deg, var(--gla-cream-200) 0 1px, transparent 1px 56px),
+        repeating-linear-gradient(90deg, var(--gla-cream-200) 0 1px, transparent 1px 56px),
+        var(--gla-cream-50);">
+        <svg style="position: absolute; inset: 0; width: 100%; height: 100%;" viewBox="0 0 400 380" fill="none" preserveAspectRatio="xMidYMid slice"><path d="M-20 250 Q 120 200 180 230 T 420 180" stroke="var(--gla-green-200)" stroke-width="10" fill="none" stroke-linecap="round"/><path d="M90 -20 Q 120 150 230 200 T 300 400" stroke="var(--gla-gold-300)" stroke-width="6" fill="none" stroke-linecap="round" opacity="0.7"/></svg>
+        <div style="position: absolute; top: 47%; left: 45%; transform: translate(-50%,-50%);">
+          <div style="width: 52px; height: 52px; border-radius: 50% 50% 50% 4px; background: var(--gla-green-800); transform: rotate(-45deg); box-shadow: var(--elev-3); display: flex; align-items: center; justify-content: center;"><span style="transform: rotate(45deg); color: var(--gla-gold-300); font-family: var(--font-serif); font-style: italic; font-weight: 700;">M</span></div>
+        </div>
+        <div style="position: absolute; bottom: 18px; left: 18px; background: rgba(251,250,246,0.94); backdrop-filter: blur(6px); border-radius: 14px; padding: 12px 16px; box-shadow: var(--elev-2); font-size: 13px; font-weight: 600; color: var(--gla-ink-900);">Maheshwaram · Civil Lines</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer style="background: var(--gla-green-900); color: rgba(247,245,238,0.72); padding: 72px 0 0;">
+    <div style="max-width: 1280px; margin: 0 auto; padding: 0 56px;">
+      <div style="display: grid; grid-template-columns: 1.6fr 1fr 1fr 1.2fr; gap: 48px; padding-bottom: 52px; border-bottom: 1px solid rgba(255,255,255,0.12);">
+        <div>
+          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 18px;">
+            <span style="width: 40px; height: 40px; border-radius: 50%; background: var(--gla-cream-50); border: 1.5px solid var(--gla-gold-500); display: flex; align-items: center; justify-content: center; color: var(--gla-green-800); font-family: var(--font-serif); font-style: italic; font-weight: 700; font-size: 21px;">M</span>
+            <span style="font-family: var(--font-serif); font-style: italic; font-weight: 600; font-size: 21px; color: var(--gla-white);">Maheshwaram</span>
+          </div>
+          <p style="font-size: 14.5px; line-height: 1.6; color: rgba(247,245,238,0.6); margin: 0 0 20px; max-width: 34ch;">Fine stationery &amp; writing goods, kept on a quiet lane in Mathura since 2012.</p>
+          <div style="display: flex; gap: 10px;">
+            <a href="Contact.dc.html" aria-label="Instagram" style="width: 38px; height: 38px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.2); display: flex; align-items: center; justify-content: center; color: rgba(247,245,238,0.8); transition: all var(--duration) var(--easing-soft);" style-hover="background: var(--gla-gold-500); color: var(--gla-ink-900); border-color: var(--gla-gold-500);"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"></circle></svg></a>
+            <a href="Contact.dc.html" aria-label="Facebook" style="width: 38px; height: 38px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.2); display: flex; align-items: center; justify-content: center; color: rgba(247,245,238,0.8); transition: all var(--duration) var(--easing-soft);" style-hover="background: var(--gla-gold-500); color: var(--gla-ink-900); border-color: var(--gla-gold-500);"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H8v3h3v7h3v-7h3l1-3h-4V9c0-.6.4-1 1-1z"></path></svg></a>
+            <a href="Contact.dc.html" aria-label="WhatsApp" style="width: 38px; height: 38px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.2); display: flex; align-items: center; justify-content: center; color: rgba(247,245,238,0.8); transition: all var(--duration) var(--easing-soft);" style-hover="background: var(--gla-gold-500); color: var(--gla-ink-900); border-color: var(--gla-gold-500);"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-2.8.9.9-2.8-.2-.3A8 8 0 1 1 12 20zm4.4-5.9c-.2-.1-1.4-.7-1.6-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.5 6.5 0 0 1-3.2-2.8c-.2-.4.2-.4.6-1.2a.5.5 0 0 0 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.6 4c2.4 1 2.4.7 2.8.6a2.5 2.5 0 0 0 1.7-1.2 2 2 0 0 0 .1-1.2c0-.1-.2-.2-.5-.3z"></path></svg></a>
+          </div>
+        </div>
+        <div>
+          <h4 style="font-size: 13px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gla-gold-300); margin: 0 0 18px;">Shop</h4>
+          <div style="display: flex; flex-direction: column; gap: 12px;">
+            <a href="#categories" style="font-size: 14.5px; color: rgba(247,245,238,0.7); text-decoration: none;" style-hover="color: var(--gla-white);">Writing Instruments</a>
+            <a href="#categories" style="font-size: 14.5px; color: rgba(247,245,238,0.7); text-decoration: none;" style-hover="color: var(--gla-white);">Notebooks &amp; Journals</a>
+            <a href="#categories" style="font-size: 14.5px; color: rgba(247,245,238,0.7); text-decoration: none;" style-hover="color: var(--gla-white);">Art &amp; Craft</a>
+            <a href="#categories" style="font-size: 14.5px; color: rgba(247,245,238,0.7); text-decoration: none;" style-hover="color: var(--gla-white);">Office &amp; Desk</a>
+            <a href="#categories" style="font-size: 14.5px; color: rgba(247,245,238,0.7); text-decoration: none;" style-hover="color: var(--gla-white);">Gifting &amp; Planners</a>
+          </div>
+        </div>
+        <div>
+          <h4 style="font-size: 13px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gla-gold-300); margin: 0 0 18px;">Explore</h4>
+          <div style="display: flex; flex-direction: column; gap: 12px;">
+            <a href="Home.dc.html" style="font-size: 14.5px; color: rgba(247,245,238,0.7); text-decoration: none;" style-hover="color: var(--gla-white);">Home</a>
+            <a href="Gallery.dc.html" style="font-size: 14.5px; color: rgba(247,245,238,0.7); text-decoration: none;" style-hover="color: var(--gla-white);">Gallery</a>
+            <a href="About.dc.html" style="font-size: 14.5px; color: rgba(247,245,238,0.7); text-decoration: none;" style-hover="color: var(--gla-white);">About Us</a>
+            <a href="Contact.dc.html" style="font-size: 14.5px; color: rgba(247,245,238,0.7); text-decoration: none;" style-hover="color: var(--gla-white);">Contact</a>
+          </div>
+        </div>
+        <div>
+          <h4 style="font-size: 13px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gla-gold-300); margin: 0 0 18px;">Visit</h4>
+          <p style="font-size: 14.5px; line-height: 1.6; color: rgba(247,245,238,0.7); margin: 0 0 10px;">14 Heritage Lane, Civil Lines,<br>Mathura, UP 281001</p>
+          <p style="font-size: 14.5px; line-height: 1.6; color: rgba(247,245,238,0.7); margin: 0;">+91 98765 43210<br><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="bdd5d8d1d1d2fdd0dcd5d8ced5cadccfdcd093d4d3">[email&#160;protected]</a></p>
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 26px 0; flex-wrap: wrap;">
+        <span style="font-size: 13px; color: rgba(247,245,238,0.5);">© 2026 Maheshwaram. Crafted with care in Mathura.</span>
+        <span style="font-size: 13px; color: rgba(247,245,238,0.5);">Terms · Privacy · Shipping &amp; Returns</span>
+      </div>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { news: "", newsMsg: "" };
+
+  onNews = (e) => this.setState({ news: e.target.value });
+
+  submitNews = (e) => {
+    e.preventDefault();
+    const v = (this.state.news || "").trim();
+    if (!v || !/.+@.+\..+/.test(v)) {
+      this.setState({ newsMsg: "Please enter a valid email address." });
+      return;
+    }
+    this.setState({ news: "", newsMsg: "You're on the list — welcome to Maheshwaram." });
+  };
+
+  componentDidMount() {
+    // Header shadow on scroll
+    const header = document.getElementById("mhs-header");
+    const onScroll = () => {
+      if (!header) return;
+      header.style.boxShadow = window.scrollY > 10 ? "0 12px 40px -16px rgba(10,67,50,0.18)" : "none";
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+
+  }
+
+  renderVals() {
+    return {
+      news: this.state.news,
+      newsMsg: this.state.newsMsg,
+      onNews: this.onNews,
+      submitNews: this.submitNews,
+    };
+  }
+}
+</script>
+</body>
+</html>
